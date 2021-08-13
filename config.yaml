@@ -1,0 +1,25 @@
+directory:
+  # 必須
+  - "path" : "/home/umisora675/kioxpace/get_filtered_tweets"
+  # 階層を指定したい場合は、次の行を設定。defaultは1。設定が無くてもよい。
+    "depth"   : 2
+    # 指定日数より古いDirをbarグラフ化。単位はday。
+    "older"   : 30
+
+    # alert設定。越えると、"send_to"で設定した先へ連絡。
+    "alert"   :
+      "value"   : 0.03    ## giga
+      # "value"   : "90%"  # %を使いたい場合は%をつけて""で囲む
+
+      # 使いたい情報出力先。どれか一つでも、全部でもOK。
+      # 空の設定、または設定が無い場合は無視。
+      "send_to" :
+      "oi.chat" :
+        "channel" : ""
+        "mail" :
+          - ""
+        "redmine":
+          - ""
+
+  ## 最小設定。dirの履歴をdbに保存するだけ。
+  - "path" : "/home/bauer_2/jenkin2_work"
